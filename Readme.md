@@ -68,7 +68,7 @@
 
 ## Assets
 
-#### The following are the assets used for this repository. "item4.jpg" can be copied to any location of the device and its full path can be used for the gist on the [Image]() class.
+#### The following are the assets used for this repository. "item4.jpg" can be copied to any location of the device and its full path can be used for the gist on the [Image](https://github.com/flutternoob/nGoFer/blob/master/Folders/CircleAvatar%20Widget%2C%20Widget%20functions%2C%20Custom%20Widgets%2C%20Image%20class%20and%20the%20Spread%20operator/CircleAvatar%20Widget%2C%20Widget%20functions%2C%20Custom%20Widgets%2C%20Image%20class%20and%20the%20Spread%20operator.md) class.
 
 [Cars01](Folders/_Assets/cars/Cars01.jpg)  
 [Cars02](Folders/_Assets/cars/Cars02.jpg)  
