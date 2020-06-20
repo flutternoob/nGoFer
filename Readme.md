@@ -2,7 +2,7 @@
 
 ## About this Repository
 
-#### This page contains demonstrations of some Flutter Widgets and Dart code (for beginners). As far as possible, adequate comments are left in the code for the code's working. The gists (some code may be too long to be called a gist) in this reposirtory are provided as is. Feel free to learn, use, modify the code and have fun with it as per your use case.
+#### This page contains demonstrations of some Flutter Widgets and Dart code (for beginners). As far as possible, adequate comments are left in the code for the code's working. The gists (some code may be too long to be called a gist) in this repository are provided as is. Feel free to learn, use, modify the code and have fun with it as per your use case.
 
 1) [Boilerplate for new demo apps](https://github.com/flutternoob/nGoFer/blob/master/Folders/Boilerplate%20for%20new%20demo%20apps/Boilerplate%20for%20new%20demo%20apps.md)  
 2) [Bottom App Bar and Floating Action Button Widgets](https://github.com/flutternoob/nGoFer/blob/master/Folders/Bottom%20App%20Bar%20and%20Floating%20Action%20Button%20Widgets/Bottom%20App%20Bar%20and%20Floating%20Action%20Button%20Widgets.md)  
