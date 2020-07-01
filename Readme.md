@@ -30,7 +30,7 @@
 24) [IndexedStack Widget](https://github.com/flutternoob/nGoFer/blob/master/Folders/IndexedStack%20Widget/IndexedStack%20Widget.md)  
 25) [Light to Dark Theme Switching](https://github.com/flutternoob/nGoFer/blob/master/Folders/Light%20to%20Dark%20Theme%20Switching/Light%20to%20Dark%20Theme%20Switching.md)  
 26) [ListviewSeparated, DataModels and Modularized Code](https://github.com/flutternoob/nGoFer/blob/master/Folders/ListviewSeparated%2C%20DataModels%20and%20Modularized%20Code/ListviewSeparated%2C%20DataModels%20and%20Modularized%20Code.md)  
-27) [Modularizing the App Interface](https://github.com/flutternoob/nGoFer/blob/master/Folders/Modularizing%20the%20App%20Interface/Modularizing%20the%20App%20Interface.md) 
+27) [Modularizing the App Interface](https://github.com/flutternoob/nGoFer/blob/master/Folders/Modularizing%20the%20App%20Interface/Modularizing%20the%20App%20Interface.md)  
 28) [NavigationRail Widget](https://github.com/flutternoob/nGoFer/blob/master/Folders/NavigationRail%20Widget/NavigationRail%20Widget.md)  
 29) [PageView and PageViewBuilder Widget](https://github.com/flutternoob/nGoFer/blob/master/Folders/PageView%20and%20PageViewBuilder%20Widget/PageView%20and%20PageViewBuilder%20Widget.md)  
 30) [Portrait and Landscape Modes](https://github.com/flutternoob/nGoFer/blob/master/Folders/Portrait%20and%20Landscape%20Modes/Portrait%20and%20Landscape%20Modes.md)  
