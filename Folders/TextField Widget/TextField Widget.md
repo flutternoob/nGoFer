@@ -21,11 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        ///Set the primaryColor value to apply the change to the TextField's border
-          primaryColor: Colors.blue[900],
+
+        ///Set the properties to apply the change to the cursor and text selection handle
           cursorColor: Colors.black,
-          textSelectionHandleColor: Colors.black
-      ),
+          textSelectionHandleColor: Colors.black),
       home: Scaffold(
         appBar: AppBar(
           elevation: 10,
@@ -45,7 +44,6 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
-
   TextEditingController nameTextController = TextEditingController();
   TextEditingController emailTextController = TextEditingController();
   TextEditingController addressTextController = TextEditingController();
@@ -62,26 +60,22 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           labelText: 'Name',
           hintText: 'Text',
           textEditingController: nameTextController,
-          textStatus: nameTextController.text
-      ),
+          textStatus: nameTextController.text),
       TextFieldModel(
           labelText: 'E-mail Address',
           hintText: 'Text',
           textEditingController: emailTextController,
-          textStatus: emailTextController.text
-      ),
+          textStatus: emailTextController.text),
       TextFieldModel(
           labelText: 'Address',
           hintText: 'Text',
           textEditingController: addressTextController,
-          textStatus: addressTextController.text
-      ),
+          textStatus: addressTextController.text),
       TextFieldModel(
           labelText: 'Phone Number',
           hintText: 'Number',
           textEditingController: phoneNumberTextController,
-          textStatus: phoneNumberTextController.text
-      ),
+          textStatus: phoneNumberTextController.text),
     ];
   }
 
@@ -93,6 +87,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
+
       ///Using the GestureDetector Widget with the following properties of Widget allows dismissing the keyboard, on
       ///tapping anywhere in the Viewport.
       child: GestureDetector(
@@ -101,37 +96,64 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           FocusScope.of(context).requestFocus(FocusNode());
         },
         child: ListView(
-          children: textFieldModel.map((textFieldModelParameter) =>
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: TextField(
-                      maxLines: textFieldModelParameter.labelText == 'Address'? null: 1,
-                      controller: textFieldModelParameter.textEditingController,
-                      decoration: InputDecoration(
-                          labelText: textFieldModelParameter.labelText,
-                          labelStyle: TextStyle(color: Colors.black),
-                          hintStyle: TextStyle(color: Colors.black),
-                          hintText: textFieldModelParameter.hintText,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10))
-                          )
+          children: textFieldModel
+              .map((textFieldModelParameter) => Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextField(
+                  ///Setting the keyBoardType property. If the labelText == "E-mail Address", then the TextInputType
+                  ///is emailAddress. If the labelText is "Phone Number", then the TextInputType is phone. If the
+                  ///labelText == "Name",  then the TextInputType is text. In the last condition (where the
+                  ///labelText == "Address"), the TextInputType is multiline.
+                  keyboardType: textFieldModelParameter.labelText == 'Phone Number'
+                      ? TextInputType.phone
+                      : textFieldModelParameter.labelText == 'E-mail Address'
+                      ? TextInputType.emailAddress
+                      : textFieldModelParameter.labelText == 'Name'
+                      ? TextInputType.text
+                      : TextInputType.multiline,
+                  maxLines: textFieldModelParameter.labelText == 'Address' ? null : 1,
+                  controller: textFieldModelParameter.textEditingController,
+                  decoration: InputDecoration(
+                    labelText: textFieldModelParameter.labelText,
+                    labelStyle: TextStyle(color: Colors.black),
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: textFieldModelParameter.hintText,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
                       ),
-                      onChanged: (String value) {
-                        setState(() {
-                          textFieldModelParameter.textStatus = value;
-                        });
-                      },
+                      borderSide: BorderSide(color: Colors.blue[900], width: 2),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      borderSide: BorderSide(color: Colors.grey, width: 2),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      borderSide: BorderSide(color: Colors.blue[900], width: 2),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text('${textFieldModelParameter.labelText}: ${textFieldModelParameter.textStatus}'),
-                  )
-                ],
-              )).toList(),
+                  onChanged: (String value) {
+                    setState(() {
+                      textFieldModelParameter.textStatus = value;
+                    });
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text('${textFieldModelParameter.labelText}: ${textFieldModelParameter.textStatus}'),
+              )
+            ],
+          ))
+              .toList(),
         ),
       ),
     );
@@ -146,8 +168,13 @@ class TextFieldModel {
 
   TextFieldModel({this.textEditingController, this.labelText, this.hintText, this.textStatus});
 }
+
 ```
 
 #### Screenshots
 [TextFieldWidget01](Screenshots/TextFieldWidget01.png)  
-[TextFieldWidget02](Screenshots/TextFieldWidget02.png)
+[TextFieldWidget02](Screenshots/TextFieldWidget02.png)  
+[TextFieldWidget03](Screenshots/TextFieldWidget03.png)  
+[TextFieldWidget04](Screenshots/TextFieldWidget04.png)  
+[TextFieldWidget05](Screenshots/TextFieldWidget05.png)  
+[TextFieldWidget06](Screenshots/TextFieldWidget06.png)
