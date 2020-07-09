@@ -1,4 +1,7 @@
-<meta name="google-site-verification" content="rvabSWyj9mCvFCg0RIn1N09cZhKjzwrNHnv-FbiRnW8" />
+<!DOCTYPE html>
+<html>
+<head><meta name="google-site-verification" content="rvabSWyj9mCvFCg0RIn1N09cZhKjzwrNHnv-FbiRnW8" /></head>
+</html>
 
 # Gist of Flutter
 
